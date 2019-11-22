@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.starlingbank.R
 import com.example.starlingbank.databinding.ActivityMainBinding
 import com.example.starlingbank.injection.ViewModelFactory
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        binding.transactionFeed.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         viewModel = ViewModelProviders.of(this, ViewModelFactory(this)).get(MainViewModel::class.java)
         binding.viewModel = viewModel

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">StarlingBank</string>
+    <string name="transaction_name">Transaction Name</string>
+    <string name="_100_00">$100.00</string>
 </resources>

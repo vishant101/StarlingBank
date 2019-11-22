@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.starlingbank.views.main.feed_element.FeedElementViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin_small"
+        android:layout_marginBottom="@dimen/activity_vertical_margin_small"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/plan_value_section"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/activity_horizontal_margin_small"
+            android:paddingTop="@dimen/activity_vertical_margin_small"
+            android:paddingBottom="@dimen/activity_vertical_margin_small"
+            android:paddingEnd="@dimen/activity_horizontal_margin_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/transaction_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.transactionName}"
+                android:hint="@string/transaction_name"
+                />
+
+            <TextView
+                android:id="@+id/transaction_amount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingStart="@dimen/activity_horizontal_margin_small"
+                android:paddingEnd="@dimen/activity_horizontal_margin_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.transactionAmount}"
+                android:hint="@string/_100_00"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -21,6 +21,8 @@ class MainViewModel(private val accountDao: AccountDao): BaseViewModel() {
     private var accountSubscription: Disposable? = null
     private var transactionFeedSubscription: Disposable? = null
 
+    val transactionFeedAdapter: TransactionFeedAdapter = TransactionFeedAdapter()
+
     init {
         loadAccounts()
     }
@@ -29,7 +31,6 @@ class MainViewModel(private val accountDao: AccountDao): BaseViewModel() {
         super.onCleared()
         accountSubscription?.dispose()
     }
-
 
     private fun loadAccounts(){
         accountSubscription = Observable.fromCallable{ accountDao.all }
@@ -82,6 +83,7 @@ class MainViewModel(private val accountDao: AccountDao): BaseViewModel() {
 
     private fun onLoadTransactionFeedSuccess(transactionFeed: TransactionFeed) {
         Log.i(RESULT, transactionFeed.toString())
+        transactionFeedAdapter.updateTransactionFeed(transactionFeed)
     }
     
 }
