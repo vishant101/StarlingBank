@@ -1,4 +1,4 @@
-package com.example.starlingbank.data.model
+package com.example.starlingbank.data.model.accounts
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

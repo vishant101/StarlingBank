@@ -3,7 +3,7 @@ package com.example.starlingbank.data.database
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.starlingbank.data.model.Account
+import com.example.starlingbank.data.model.accounts.Account
 
 @Dao
 interface AccountDao {
