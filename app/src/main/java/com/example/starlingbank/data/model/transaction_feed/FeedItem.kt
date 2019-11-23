@@ -1,4 +1,4 @@
-package com.example.starlingbank.data.model.trasnaction_feed
+package com.example.starlingbank.data.model.transaction_feed
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

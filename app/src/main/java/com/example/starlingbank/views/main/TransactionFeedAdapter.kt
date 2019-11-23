@@ -1,13 +1,12 @@
 package com.example.starlingbank.views.main
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.starlingbank.R
-import com.example.starlingbank.data.model.trasnaction_feed.FeedItem
-import com.example.starlingbank.data.model.trasnaction_feed.TransactionFeed
+import com.example.starlingbank.data.model.transaction_feed.FeedItem
+import com.example.starlingbank.data.model.transaction_feed.TransactionFeed
 import com.example.starlingbank.databinding.ItemFeedElementBinding
 import com.example.starlingbank.views.main.feed_element.FeedElementViewModel
 
