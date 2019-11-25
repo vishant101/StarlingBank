@@ -5,7 +5,7 @@ A simple app to diplay tranactions and “round-up” outgoing transactions to a
 1. Download and install android studio
 
 2. Clone the repo:
-- `git clone https://github.com/vishant101/MoneyBox.git`
+- `git clone https://github.com/vishant101/StarlingBank.git`
 
 3. Snyc gradle 
 
