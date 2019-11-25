@@ -32,6 +32,7 @@ object NetworkModule {
             val request = original.newBuilder()
                 .header(ACCEPT, APPLICATION_JSON)
                 .header(USER_AGENT, ANDROID)
+                .header("Content-Type", APPLICATION_JSON)
                 .method(original.method(), original.body())
                 .build()
             chain.proceed(request)

@@ -11,7 +11,11 @@ class FeedElementViewModel: BaseViewModel() {
 
     fun bind(feedItem: FeedItem){
         this.feedItem.value = feedItem
-        transactionName.value = feedItem.reference
-        transactionAmount.value = "£${feedItem.amount.minorUnits/100}"
+        transactionName.value = feedItem.spendingCategory
+        if (feedItem.direction == "OUT") {
+            transactionAmount.value = "-£${feedItem.amount.minorUnits.toFloat()/100}"
+        } else {
+            transactionAmount.value = "+£${feedItem.amount.minorUnits.toFloat()/100}"
+        }
     }
 }

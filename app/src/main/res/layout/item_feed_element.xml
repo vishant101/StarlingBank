@@ -32,6 +32,8 @@
                 android:id="@+id/transaction_name"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                android:paddingStart="@dimen/activity_horizontal_margin_small"
+                android:paddingEnd="@dimen/activity_horizontal_margin_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@{viewModel.transactionName}"
